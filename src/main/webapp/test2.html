@@ -1,0 +1,75 @@
+<div class="codeblock">
+    <div class="dp-highlighter">
+        <div class="bar">
+            <div class="tools"><a href="#" onclick="dp.sh.Toolbar.Command('ViewSource',this);return false;"></a><a
+                    href="#" onclick="dp.sh.Toolbar.Command('PrintSource',this);return false;"></a><a href="#"
+                                                                                                      onclick="dp.sh.Toolbar.Command('About',this);return false;"></a>
+            </div>
+        </div>
+        <ol start="1" class="dp-j">
+            <li class="alt"><span><span
+                    class="keyword">package</span><span>&nbsp;com.javatpoint;&nbsp;&nbsp;</span></span></li>
+            <li class=""><span><span class="keyword">import</span><span>&nbsp;org.springframework.stereotype.Controller;&nbsp;&nbsp;</span></span>
+            </li>
+            <li class="alt"><span><span class="keyword">import</span><span>&nbsp;org.springframework.web.bind.annotation.RequestMapping;&nbsp;&nbsp;</span></span>
+            </li>
+            <li class=""><span><span class="keyword">import</span><span>&nbsp;org.springframework.web.servlet.ModelAndView;&nbsp;&nbsp;</span></span>
+            </li>
+            <li class="alt"><span><span class="annotation">@Controller</span><span>&nbsp;&nbsp;</span></span></li>
+            <li class=""><span><span class="keyword">public</span><span>&nbsp;</span><span
+                    class="keyword">class</span><span>&nbsp;HelloWorldController&nbsp;{&nbsp;&nbsp;</span></span></li>
+            <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span
+                    class="annotation">@RequestMapping</span><span>(</span><span class="string">"/hello"</span><span>)&nbsp;&nbsp;</span></span>
+            </li>
+            <li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">public</span><span>&nbsp;ModelAndView&nbsp;helloWorld()&nbsp;{&nbsp;&nbsp;</span></span>
+            </li>
+            <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;message&nbsp;=&nbsp;<span
+                    class="string">"HELLO&nbsp;SPRING&nbsp;MVC&nbsp;HOW&nbsp;R&nbsp;U"</span><span>;&nbsp;&nbsp;</span></span>
+            </li>
+            <li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;</span><span
+                    class="keyword">new</span><span>&nbsp;ModelAndView(</span><span
+                    class="string">"hellopage"</span><span>,&nbsp;</span><span class="string">"message"</span><span>,&nbsp;message);&nbsp;&nbsp;</span></span>
+            </li>
+            <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li>
+            <li class=""><span>}&nbsp;&nbsp;</span></li>
+        </ol>
+    </div><textarea name="code" class="java" style="display: none;">package com.javatpoint;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+@Controller
+public class HelloWorldController {
+	@RequestMapping("/hello")
+	public ModelAndView helloWorld() {
+		String message = "HELLO SPRING MVC HOW R U";
+		return new ModelAndView("hellopage", "message", message);
+	}
+}
+</textarea></div>
+
+<style>
+    .dp-highlighter {
+        width: inherit;
+        overflow: hidden;
+        margin: 8px 0 !important;
+        padding-top: 0;
+    }
+    .dp-highlighter .bar {
+        padding-left: 45px;
+    }
+    .codeblock {
+        width: 100%;
+        margin-bottom: 8px;
+        font-family: verdana;
+        padding-left: 0px;
+        border: 1px solid #d5ddc6;
+        border-left-width: 1px;
+        border-left-style: solid;
+        border-left-color: rgb(213, 221, 198);
+        border-left: 4px solid #6b5;
+        -moz-box-shadow: 6px 3px 8px #d4d4d4;
+        -webkit-box-shadow: 6px 3px 8px #d4d4d4;
+        box-shadow: 6px 3px 8px #d4d4d4;
+    }
+
+</style>
